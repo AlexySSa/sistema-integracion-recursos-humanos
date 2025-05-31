@@ -8,7 +8,8 @@ export function validateEmployee(employee: any): void {
         throw new Error('El empleado no puede ser nulo');
     }
     
-    const requiredFields = ['id', 'name', 'email', 'department', 'salary'];
+  const requiredFields = ['id', 'fullName', 'email', 'department', 'salary', 'position', 'startDate'];
+
     for (const field of requiredFields) {
         if (!employee[field]) {
             throw new Error(`Campo requerido faltante: ${field}`);
